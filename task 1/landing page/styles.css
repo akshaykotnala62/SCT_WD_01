@@ -1,0 +1,110 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav .menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    color: #ffcc00; /* Change to your preferred hover color */
+    border-radius: 5px;
+}
+
+section {
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+#home {
+    background-color: #f4f4f4;
+}
+
+#about {
+    background-color: #e2e2e2;
+}
+
+#services {
+    background-color: #d0d0d0;
+}
+
+#contact {
+    background-color: #bebebe;
+}
+
+/* Styles for scrolled state */
+.navbar-scrolled {
+    background-color: #222;
+    color: #ffcc00; /* Change to your preferred font color when scrolled */
+}
+
+.navbar-scrolled a {
+    color: #ffcc00; /* Change to your preferred link color when scrolled */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+}
+
